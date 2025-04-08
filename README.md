@@ -1,68 +1,91 @@
-# GCP Batch Data Pipeline – Chicago Salaries Analysis & SQL Optimization
+# GCP Chicago Salaries Optimization Project
 
-This project demonstrates an end-to-end batch data pipeline using Google Cloud Platform (GCP), built around the Chicago Public Salaries dataset. It showcases how to ingest, process, transform, and analyze public data at scale using GCP tools and SQL optimization techniques.
+A data engineering project leveraging Google Cloud Platform (GCP) to build an end-to-end data pipeline. The project utilizes public salary data from the City of Chicago to demonstrate data ingestion, storage, transformation, and optimization using SQL and Python.
 
-## 🚀 Tech Stack
+![Dashboard Preview](Chicago_Salaries.png)
 
-- **Google Cloud Storage (GCS)** – for raw data storage
-- **BigQuery** – for scalable data warehousing and transformations
-- **Google Cloud SDK** – for command-line operations
-- **SQL** – for analysis and optimization
-- **GitHub** – for version control
+## 📁 Dataset
 
-## 📊 Dataset
-
-Public dataset: [Chicago Salaries](https://data.cityofchicago.org/Administration-Finance/Employee-Salaries/53t8-wyrc)  
-Source: City of Chicago data portal  
-Format: CSV (uploaded to GCS)
-
-## 🔁 Data Pipeline Flow
-
-1. Download public dataset in CSV format.
-2. Upload CSV to GCS bucket.
-3. Load data from GCS into BigQuery table.
-4. Run SQL queries for transformations and analysis:
-   - Calculate average salary by department.
-   - Top 10 highest-paid job titles.
-   - Filter employees working more than 40 hours.
-   - Estimate annual salary from hourly rates.
-   - Compare full-time vs part-time workers.
-5. Export processed data back to GCS for visualization/reporting.
-6. (Optional) Connect Looker Studio for interactive dashboards.
-
-![Pipeline Diagram](images/pipeline_diagram.png)
-
-## 🧠 Key SQL Optimization Techniques
-
-- Used `IS NOT NULL` filters to reduce scan size.
-- Grouped data and calculated aggregates efficiently.
-- Applied conditional logic for estimated fields.
-- Scheduled queries for daily exports (BigQuery scheduler).
-
-## 📁 Project Structure
-
-```
-├── chicago_salaries.csv        # Raw data
-├── queries/                    # SQL transformation scripts
-├── export/                     # Processed and exported datasets
-├── images/                     # Pipeline diagrams and dashboard
-├── README.md                   # Project overview and guide
-```
-
-## 💡 Learnings & Impact
-
-- End-to-end exposure to building scalable batch pipelines on GCP.
-- Hands-on with BigQuery SQL best practices.
-- Optimized transformations and automated scheduling.
-- Ready-to-use portfolio project for resumes and interviews.
-
-## 📌 Author
-
-**Vijay More**  
-Email: vijaymore300793@gmail.com  
-LinkedIn: [linkedin.com/in/morevijay-dataengineer](https://linkedin.com/in/morevijay-dataengineer)  
-GitHub: [github.com/Vijay457-ui](https://github.com/Vijay457-ui)
+- **Source**: [City of Chicago Salaries](https://data.cityofchicago.org/)
+- **File**: `chicago_salaries.csv`
+- **Rows**: 32,151+
+- **Columns**: Name, Job Title, Department, Full/Part-Time, Salary/Hourly, Hours, Salary, Hourly Rate
 
 ---
 
-⭐ If you found this project helpful, please give it a star and connect with me!
+## 🚀 Project Workflow
+
+1. **Data Ingestion**
+   - Python script to download and upload CSV to Google Cloud Storage (GCS)
+2. **Load to BigQuery**
+   - CLI command to load data from GCS to BigQuery
+3. **SQL Data Transformation & Optimization**
+   - Applied transformations and aggregated metrics using optimized SQL queries
+4. **Scheduled Queries**
+   - Created a scheduled query to run daily summary exports
+5. **Export to GCS**
+   - Exported the processed BigQuery table back to GCS
+
+---
+
+## 🔧 Technologies Used
+
+- **Cloud**: Google Cloud Platform (GCS, BigQuery)
+- **Language**: Python
+- **SQL**: BigQuery Standard SQL
+- **Visualization**: Looker Studio (Optional)
+- **Tools**: Google Cloud CLI, Git, GitHub
+
+---
+
+## 📊 SQL Queries Used
+
+- Average salary by department  
+- Top 10 highest-paid job titles  
+- Filter employees working > 40 hours/week  
+- Convert hourly rates to annual salary  
+- Full-time vs part-time employee count  
+
+> All SQL scripts are available in [`sql_scripts`](./sql_scripts) folder
+
+---
+
+## 🐍 Python Scripts
+
+- [`upload_to_gcs.py`](./python_scripts/upload_to_gcs.py): Uploads local CSV to GCS  
+- [`load_to_bigquery.py`](./python_scripts/load_to_bigquery.py): Loads GCS CSV into BigQuery  
+- [`export_from_bigquery.py`](./python_scripts/export_from_bigquery.py): Exports BigQuery table to GCS
+
+---
+
+## 📈 Optional Looker Studio Dashboard
+
+> If used, attach a preview and link here
+
+- [Live Dashboard (Optional)](https://lookerstudio.google.com/reporting/...)
+
+---
+
+## 📎 How to Reproduce
+
+1. Clone this repo  
+2. Update GCP bucket/table names in Python scripts  
+3. Run the Python scripts step-by-step  
+4. Use provided SQL queries for transformations  
+5. Export and visualize
+
+---
+
+## 📬 Author
+
+**Vijay More**  
+Aspiring GCP Data Engineer  
+📧 vijaymore300793@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/morevijay-dataengineer)
+
+---
+
+## ⭐️ Star this Repo
+
+If you found this helpful, feel free to star ⭐ this repository and share it with your network.
+
