@@ -100,6 +100,15 @@ Automated export via Scheduled Queries
 Produced a clean, insightful summary of public employee salaries
 
 ----
+## 📸 Sample Output Screenshots
+
+### ▶️ Average Salary by Department (CLI Output)
+![Average Salary Output](ss_of_avg_annual_sal_output.png)
+
+### ▶️ Unique Job (CLI Output)
+![Unique Job Output](ss_of_unique_job_output.png)
+---
+
 ## 📬 Author
 
 **Vijay More**  
