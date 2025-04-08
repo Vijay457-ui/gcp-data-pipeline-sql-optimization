@@ -58,28 +58,30 @@ A data engineering project leveraging Google Cloud Platform (GCP) to build an en
 
 ---
 
-## 📈 Optional Looker Studio Dashboard
-
-> If used, attach a preview and link here
-
-- [Live Dashboard (Optional)](https://lookerstudio.google.com/reporting/...)
-
----
-
 ## 📎 How to Reproduce
 
 1. Clone this repo  
-2. Update GCP bucket/table names in Python scripts  
-3. Run the Python scripts step-by-step  
-4. Use provided SQL queries for transformations  
-5. Export and visualize
+2. Update GCP bucket/table names in Python scripts
+   upload_to_gcs.py → load_to_bigquery.py → extract_from_bigquery.py 
+4. Run the Python scripts step-by-step  
+5. Use provided SQL queries for transformations  
+6. Export and visualize
 
 ---
+##  Project Outcomes
+Successfully built an end-to-end batch data pipeline on GCP
 
+Applied SQL optimization techniques (filter pushdown, aggregation, calculated fields)
+
+Automated export via Scheduled Queries
+
+Produced a clean, insightful summary of public employee salaries
+
+----
 ## 📬 Author
 
 **Vijay More**  
-Aspiring GCP Data Engineer  
+GCP Data Engineer  
 📧 vijaymore300793@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/morevijay-dataengineer)
 
