@@ -49,6 +49,28 @@ A data engineering project leveraging Google Cloud Platform (GCP) to build an en
 > All SQL scripts are available in [`sql_scripts`](./sql_scripts) folder
 
 ---
+## 📂 Project Structure
+
+```bash
+├── assets/
+│   ├── pipeline_diagram.png
+│   └── dashboard.png  # Optional: Looker Studio Screenshot
+├── data/
+│   └── chicago_salaries.csv
+├── scripts/
+│   ├── upload_to_gcs.py
+│   ├── load_to_bigquery.py
+│   └── extract_from_bigquery.py
+├── sql_queries/
+│   ├── avg_salary_by_department.sql
+│   ├── top_10_job_titles.sql
+│   ├── filter_40_hours.sql
+│   ├── convert_hourly_to_annual.sql
+│   ├── fulltime_vs_parttime.sql
+│   └── scheduled_export.sql
+└── README.md
+
+---
 
 ## 🐍 Python Scripts
 
